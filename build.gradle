@@ -56,7 +56,7 @@ dependencies {
 git {
     implementation 'https://github.com/geobe/easyHibernate.git', {
         name 'easyHibernate'
-        tag 'V1.1-SNAPSHOT'
+        tag 'V1.1.2'
     }
 }
 

@@ -134,12 +134,12 @@ class DaoMethodsSpecs extends Specification {
         then: 'both objects are equal'
         nikki1.id == nikki2.id
         nikki1.firstName == nikki2.firstName
-        when: 'we change both objects  differently'
+        when: 'we change both objects differently'
         nikki1.firstName = 'Klaus'
         nikki2.firstName = 'Nikolaus'
-        def save1 = pers2Dao.save(nikki2)
+        def save2 = pers2Dao.save(nikki2)
         def comm2 = pers2Dao.commit()
-        def save2 = persDao.save(nikki1)
+        def save1 = persDao.save(nikki1)
         def comm1 = persDao.commit()
         then: ' only one object can be saved and committed, other is "stale"'
         save1 == true
